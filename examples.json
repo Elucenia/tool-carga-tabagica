@@ -1,0 +1,96 @@
+[
+  {
+    "label": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "raw": {
+        "pm": 20,
+        "elig": true
+      },
+      "level": "mid",
+      "main": "20,0"
+    },
+    "originalInput": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+    "input": {
+      "cig": 10,
+      "anos": 15,
+      "status": "0"
+    },
+    "expected": {
+      "raw": {
+        "pm": 7.5
+      },
+      "level": "info"
+    },
+    "originalInput": {
+      "cig": 10,
+      "anos": 15,
+      "status": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+    "input": {
+      "cig": 40,
+      "anos": 30,
+      "status": "1",
+      "idade": 65,
+      "parou": 20
+    },
+    "expected": {
+      "raw": {
+        "pm": 60,
+        "elig": false
+      },
+      "level": "info"
+    },
+    "originalInput": {
+      "cig": 40,
+      "anos": 30,
+      "status": "1",
+      "idade": 65,
+      "parou": 20
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+    "input": {
+      "cig": 30,
+      "anos": 20,
+      "status": "1",
+      "idade": 70,
+      "parou": 10
+    },
+    "expected": {
+      "raw": {
+        "pm": 30,
+        "elig": true
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "cig": 30,
+      "anos": 20,
+      "status": "1",
+      "idade": 70,
+      "parou": 10
+    },
+    "expandedZeroOptions": []
+  }
+]

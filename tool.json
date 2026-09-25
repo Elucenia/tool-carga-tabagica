@@ -1,0 +1,210 @@
+{
+  "tool": {
+    "id": "carga-tabagica",
+    "title": "Carga tabágica (maços-ano)",
+    "short": "Exposição ao cigarro e rastreamento de câncer de pulmão",
+    "desc": "Calcule a carga tabágica em maços-ano e veja se o paciente preenche os critérios da USPSTF 2021 para rastreamento de câncer de pulmão com TC de baixa dose.",
+    "lead": "Quantifica a exposição acumulada ao cigarro (maços por dia × anos de tabagismo) e verifica a elegibilidade ao rastreamento anual de câncer de pulmão.",
+    "spec": [
+      "pneumologia",
+      "medicina-de-familia-e-comunidade",
+      "cirurgia-toracica",
+      "oncologia-clinica",
+      "clinica-medica"
+    ],
+    "fields": [
+      [
+        "cig",
+        "Cigarros por dia (média)",
+        "num",
+        {
+          "min": 1,
+          "max": 100,
+          "unit": "cigarros",
+          "ph": "20"
+        }
+      ],
+      [
+        "anos",
+        "Anos de tabagismo",
+        "num",
+        {
+          "min": 1,
+          "max": 80,
+          "unit": "anos",
+          "ph": "30"
+        }
+      ],
+      [
+        "status",
+        "Situação atual",
+        "radio",
+        {
+          "opts": {
+            "0": "Fuma",
+            "1": "Ex-fumante"
+          }
+        }
+      ],
+      [
+        "idade",
+        "Idade (para o rastreamento)",
+        "num",
+        {
+          "min": 18,
+          "max": 110,
+          "unit": "anos",
+          "ph": "60",
+          "opt": true
+        }
+      ],
+      [
+        "parou",
+        "Anos desde que parou (ex-fumante)",
+        "num",
+        {
+          "min": 0,
+          "max": 80,
+          "unit": "anos",
+          "ph": "5",
+          "opt": true
+        }
+      ]
+    ],
+    "formula": "<p><strong>Maços-ano</strong> = (cigarros por dia ÷ 20) × anos de tabagismo. Um maço tem 20 cigarros.</p><p><strong>Rastreamento (USPSTF 2021):</strong> TC de tórax de baixa dose anual para adultos de 50 a 80 anos com ≥ 20 maços-ano que fumam atualmente ou pararam há até 15 anos.</p>",
+    "table": [
+      [
+        "Critério USPSTF 2021",
+        "Valor"
+      ],
+      [
+        "Idade",
+        "50 a 80 anos"
+      ],
+      [
+        "Carga tabágica",
+        "≥ 20 maços-ano"
+      ],
+      [
+        "Situação",
+        "Fuma ou parou há ≤ 15 anos"
+      ],
+      [
+        "Suspensão",
+        "Após 15 anos sem fumar ou problema de saúde que limite a expectativa de vida ou a cirurgia"
+      ]
+    ],
+    "tips": [
+      "Em períodos com consumo diferente, calcule cada período separadamente e some os maços-ano.",
+      "Cigarro de palha e charuto não entram bem na conta: registre o tipo e a quantidade à parte.",
+      "O rastreamento só faz sentido se o paciente tem condições e aceita tratamento cirúrgico curativo; discuta riscos (falso-positivos, sobrediagnóstico) na decisão compartilhada.",
+      "Associe sempre a abordagem para cessação do tabagismo: é a intervenção de maior impacto, com ou sem rastreamento.",
+      "Carga ≥ 10 maços-ano com sintomas respiratórios é motivo para pedir espirometria (investigação de DPOC)."
+    ],
+    "sources": [
+      [
+        "US Preventive Services Task Force; Krist AH et al. Screening for lung cancer: US Preventive Services Task Force recommendation statement. JAMA, 2021.",
+        "https://doi.org/10.1001/jama.2021.1117"
+      ]
+    ],
+    "cases": [
+      [
+        "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        {
+          "cig": 20,
+          "anos": 20,
+          "status": "0",
+          "idade": 55
+        },
+        {
+          "raw": {
+            "pm": 20,
+            "elig": true
+          },
+          "level": "mid",
+          "main": "20,0"
+        }
+      ],
+      [
+        "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        {
+          "cig": 10,
+          "anos": 15,
+          "status": "0"
+        },
+        {
+          "raw": {
+            "pm": 7.5
+          },
+          "level": "info"
+        }
+      ],
+      [
+        "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        {
+          "cig": 40,
+          "anos": 30,
+          "status": "1",
+          "idade": 65,
+          "parou": 20
+        },
+        {
+          "raw": {
+            "pm": 60,
+            "elig": false
+          },
+          "level": "info"
+        }
+      ],
+      [
+        "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        {
+          "cig": 30,
+          "anos": 20,
+          "status": "1",
+          "idade": 70,
+          "parou": 10
+        },
+        {
+          "raw": {
+            "pm": 30,
+            "elig": true
+          },
+          "level": "mid"
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}
