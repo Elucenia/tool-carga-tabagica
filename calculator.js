@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-carga-tabagica · Elucenia · https://github.com/Elucenia/tool-carga-tabagica
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"carga-tabagica","title":"Carga tabágica (maços-ano)","fields":[["cig","Cigarros por dia (média)","num",{"min":1,"max":100,"unit":"cigarros","ph":"20"}],["anos","Anos de tabagismo","num",{"min":1,"max":80,"unit":"anos","ph":"30"}],["status","Situação atual","radio",{"opts":{"0":"Fuma","1":"Ex-fumante"}}],["idade","Idade (para o rastreamento)","num",{"min":18,"max":110,"unit":"anos","ph":"60","opt":true}],["parou","Anos desde que parou (ex-fumante)","num",{"min":0,"max":80,"unit":"anos","ph":"5","opt":true}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
