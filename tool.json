@@ -5,6 +5,7 @@
     "short": "Exposição ao cigarro e rastreamento de câncer de pulmão",
     "desc": "Calcule a carga tabágica em maços-ano e veja se o paciente preenche os critérios da USPSTF 2021 para rastreamento de câncer de pulmão com TC de baixa dose.",
     "lead": "Quantifica a exposição acumulada ao cigarro (maços por dia × anos de tabagismo) e verifica a elegibilidade ao rastreamento anual de câncer de pulmão.",
+    "kind": "Calculadora",
     "spec": [
       "pneumologia",
       "medicina-de-familia-e-comunidade",
@@ -72,35 +73,6 @@
       ]
     ],
     "formula": "<p><strong>Maços-ano</strong> = (cigarros por dia ÷ 20) × anos de tabagismo. Um maço tem 20 cigarros.</p><p><strong>Rastreamento (USPSTF 2021):</strong> TC de tórax de baixa dose anual para adultos de 50 a 80 anos com ≥ 20 maços-ano que fumam atualmente ou pararam há até 15 anos.</p>",
-    "table": [
-      [
-        "Critério USPSTF 2021",
-        "Valor"
-      ],
-      [
-        "Idade",
-        "50 a 80 anos"
-      ],
-      [
-        "Carga tabágica",
-        "≥ 20 maços-ano"
-      ],
-      [
-        "Situação",
-        "Fuma ou parou há ≤ 15 anos"
-      ],
-      [
-        "Suspensão",
-        "Após 15 anos sem fumar ou problema de saúde que limite a expectativa de vida ou a cirurgia"
-      ]
-    ],
-    "tips": [
-      "Em períodos com consumo diferente, calcule cada período separadamente e some os maços-ano.",
-      "Cigarro de palha e charuto não entram bem na conta: registre o tipo e a quantidade à parte.",
-      "O rastreamento só faz sentido se o paciente tem condições e aceita tratamento cirúrgico curativo; discuta riscos (falso-positivos, sobrediagnóstico) na decisão compartilhada.",
-      "Associe sempre a abordagem para cessação do tabagismo: é a intervenção de maior impacto, com ou sem rastreamento.",
-      "Carga ≥ 10 maços-ano com sintomas respiratórios é motivo para pedir espirometria (investigação de DPOC)."
-    ],
     "sources": [
       [
         "US Preventive Services Task Force; Krist AH et al. Screening for lung cancer: US Preventive Services Task Force recommendation statement. JAMA, 2021.",
@@ -174,9 +146,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -185,17 +154,159 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T12:26:57.342Z",
+      "total": 112,
+      "passed": 112,
+      "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+      "evidenceSha256": "b417ec793165e6ccdab47424b1ca011e559fad6cd1a923f35b0bf2db5aafab03",
+      "scope": "Pack-year multiplication with 20 cigarettes per pack only; quit-time, health status, screening eligibility and clinical advice are not approved by this oracle.",
+      "source": {
+        "edition": "USPSTF 2021 final recommendation, clinician summary",
+        "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/lung-cancer-screening",
+        "locator": "How to implement this recommendation: one pack-year definition",
+        "access": "Primary official indexed clinician summary read on 2026-10-04.",
+        "scope": "Pack-year multiplication with 20 cigarettes per pack only; quit-time, health status, screening eligibility and clinical advice are not approved by this oracle."
+      },
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Maços de 20 cigarros; packyears; corte USPSTF 2021:50–80 anos,≥20 maçosano, cessação≤15 anos",
+    "implementationVersion": "carga-tabagica@native-2026-10-03+7e22da478091",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/33687470/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Maços-ano = (cigarros por dia ÷ 20) × anos de tabagismo. Um maço tem 20 cigarros. Rastreamento (USPSTF 2021): TC de tórax de baixa dose anual para adultos de 50 a 80 anos com ≥ 20 maços-ano que fumam atualmente ou pararam há até 15 anos.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "cig",
+            "label": "Cigarros por dia (média)",
+            "type": "num",
+            "min": 1,
+            "max": 100,
+            "unit": "cigarros",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "anos",
+            "label": "Anos de tabagismo",
+            "type": "num",
+            "min": 1,
+            "max": 80,
+            "unit": "anos",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "status",
+            "label": "Situação atual",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Fuma",
+              "1": "Ex-fumante"
+            }
+          },
+          {
+            "key": "idade",
+            "label": "Idade (para o rastreamento)",
+            "type": "num",
+            "min": 18,
+            "max": 110,
+            "unit": "anos",
+            "optional": true,
+            "options": null
+          },
+          {
+            "key": "parou",
+            "label": "Anos desde que parou (ex-fumante)",
+            "type": "num",
+            "min": 0,
+            "max": 80,
+            "unit": "anos",
+            "optional": true,
+            "options": null
+          }
+        ],
+        "hash": "bf37d58fd722f5f8ac685b368ad6ef4f16cfafc330391ca649ca904d2f40e4d9"
+      },
+      "sourceEditions": [
+        {
+          "citation": "US Preventive Services Task Force; Krist AH et al. Screening for lung cancer: US Preventive Services Task Force recommendation statement. JAMA, 2021.",
+          "url": "https://doi.org/10.1001/jama.2021.1117",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Screening for Lung Cancer: US Preventive Services Task Force Recommendation Statement.",
+            "year": "2021",
+            "firstPublicationDate": "2021-03-01",
+            "doi": "10.1001/jama.2021.1117",
+            "pmid": "33687470",
+            "journal": "JAMA",
+            "authors": "US Preventive Services Task Force, Krist AH, Davidson KW, Mangione CM, Barry MJ, Cabana M, Caughey AB, Davis EM, Donahue KE, Doubeni CA, Kubik M, Landefeld CS, Li L, Ogedegbe G, Owens DK, Pbert L, Silverstein M, Stevermer J, Tseng CW, Wong JB."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/33687470/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "401a33f9d62b29a2bb240ff13678b8b7955e07cb866e011a222bf7e20fdd121a",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T12:26:57.342Z",
+        "total": 112,
+        "passed": 112,
+        "evidencePath": "reports/review-20261003/fena-precision-amendment-candidate-final22.json",
+        "scope": "Pack-year multiplication with 20 cigarettes per pack only; quit-time, health status, screening eligibility and clinical advice are not approved by this oracle.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "77ba7c5ceee0d5ace81d7d94b89b83616e6667768cb3c2cc1135e33aa9445c41"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681"
+    },
+    "limits": "Os critérios USPSTF 2021 referem-se a rastreamento anual por tomografia de baixa dose em adultos de 50–80 anos com histórico de pelo menos 20 maços-ano, fumantes atuais ou que cessaram nos últimos 15 anos. A recomendação também determina interromper o rastreamento após 15 anos sem fumar ou quando condições de saúde limitam substancialmente a expectativa de vida ou a capacidade/disposição para cirurgia pulmonar curativa. O cálculo de maços-ano não avalia essas condições clínicas.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.750Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "A elegibilidade calculada apenas por idade/exposição/cessação não confirma condição clínica para rastrear ou operar. Não foi lida a tabela completa de benefícios/danos."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/carga-tabagica/calculator.js",
+    "bytes": 5489,
+    "sha256": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "8d92291ab3b9204db60590a40ba482249f43afda34295ac5d5244ff42a3ed841",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 112,
+      "sha256": "2c249b36a4e08c9172ba8a10a1956b6afdf5ae8a95b3ee424e19e6ad4a44416e",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

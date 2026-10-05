@@ -1,6 +1,15 @@
 [
   {
-    "label": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+    "id": "carga-tabagica",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+    "originalInput": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
     "input": {
       "cig": 20,
       "anos": 20,
@@ -15,16 +24,36 @@
       "level": "mid",
       "main": "20,0"
     },
-    "originalInput": {
-      "cig": 20,
-      "anos": 20,
-      "status": "0",
-      "idade": 55
+    "recordedResult": {
+      "main": [
+        "20,0",
+        "maços-ano"
+      ],
+      "label": "Carga tabágica",
+      "raw": {
+        "pm": 20,
+        "elig": true
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+    "id": "carga-tabagica",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+    "originalInput": {
+      "cig": 10,
+      "anos": 15,
+      "status": "0"
+    },
     "input": {
       "cig": 10,
       "anos": 15,
@@ -36,15 +65,38 @@
       },
       "level": "info"
     },
-    "originalInput": {
-      "cig": 10,
-      "anos": 15,
-      "status": "0"
+    "recordedResult": {
+      "main": [
+        "7,5",
+        "maços-ano"
+      ],
+      "label": "Carga tabágica",
+      "raw": {
+        "pm": 7.5,
+        "elig": null
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+    "id": "carga-tabagica",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+    "originalInput": {
+      "cig": 40,
+      "anos": 30,
+      "status": "1",
+      "idade": 65,
+      "parou": 20
+    },
     "input": {
       "cig": 40,
       "anos": 30,
@@ -59,17 +111,38 @@
       },
       "level": "info"
     },
-    "originalInput": {
-      "cig": 40,
-      "anos": 30,
-      "status": "1",
-      "idade": 65,
-      "parou": 20
+    "recordedResult": {
+      "main": [
+        "60,0",
+        "maços-ano"
+      ],
+      "label": "Carga tabágica",
+      "raw": {
+        "pm": 60,
+        "elig": false
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+    "id": "carga-tabagica",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+    "originalInput": {
+      "cig": 30,
+      "anos": 20,
+      "status": "1",
+      "idade": 70,
+      "parou": 10
+    },
     "input": {
       "cig": 30,
       "anos": 20,
@@ -84,13 +157,24 @@
       },
       "level": "mid"
     },
-    "originalInput": {
-      "cig": 30,
-      "anos": 20,
-      "status": "1",
-      "idade": 70,
-      "parou": 10
+    "recordedResult": {
+      "main": [
+        "30,0",
+        "maços-ano"
+      ],
+      "label": "Carga tabágica",
+      "raw": {
+        "pm": 30,
+        "elig": true
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

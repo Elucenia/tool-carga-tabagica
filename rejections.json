@@ -1,0 +1,589 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field cig",
+    "input": {
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field cig",
+    "input": {
+      "cig": "",
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" cig",
+    "input": {
+      "cig": "NaN",
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" cig",
+    "input": {
+      "cig": "Infinity",
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" cig",
+    "input": {
+      "cig": "1e309",
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" cig",
+    "input": {
+      "cig": "invalid",
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} cig",
+    "input": {
+      "cig": {},
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true cig",
+    "input": {
+      "cig": true,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum cig",
+    "input": {
+      "cig": 0,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum cig",
+    "input": {
+      "cig": 110,
+      "anos": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "cig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field anos",
+    "input": {
+      "cig": 20,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field anos",
+    "input": {
+      "cig": 20,
+      "anos": "",
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" anos",
+    "input": {
+      "cig": 20,
+      "anos": "NaN",
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" anos",
+    "input": {
+      "cig": 20,
+      "anos": "Infinity",
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" anos",
+    "input": {
+      "cig": 20,
+      "anos": "1e309",
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" anos",
+    "input": {
+      "cig": 20,
+      "anos": "invalid",
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} anos",
+    "input": {
+      "cig": 20,
+      "anos": {},
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true anos",
+    "input": {
+      "cig": 20,
+      "anos": true,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum anos",
+    "input": {
+      "cig": 20,
+      "anos": 0,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum anos",
+    "input": {
+      "cig": 20,
+      "anos": 88,
+      "status": "0",
+      "idade": 55
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "anos"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field status",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "status"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field status",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "",
+      "idade": 55
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "status"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option status",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "__ELUCENIA_INVALID_OPTION__",
+      "idade": 55
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "status"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 16.2
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum idade",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 121
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"NaN\" parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": "NaN"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"Infinity\" parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": "Infinity"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"1e309\" parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": "1e309"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric \"invalid\" parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": "invalid"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric {} parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": {}
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid numeric true parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": true
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject below documented minimum parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": -1
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject above documented maximum parou",
+    "input": {
+      "cig": 20,
+      "anos": 20,
+      "status": "0",
+      "idade": 55,
+      "parou": 88
+    },
+    "expected": {
+      "code": "OUT_OF_RANGE",
+      "field": "parou"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

@@ -1,0 +1,407 @@
+{
+  "id": "carga-tabagica",
+  "at": "2026-10-05T17:29:09.272Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/carga-tabagica/calculator.js",
+    "bytes": 5489,
+    "sha256": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681"
+  },
+  "cases": [
+    {
+      "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+      "input": {
+        "cig": 20,
+        "anos": 20,
+        "status": "0",
+        "idade": 55
+      },
+      "obtained": {
+        "id": "carga-tabagica",
+        "main": [
+          "20,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 20,
+          "elig": true
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.main",
+          "expected": "20,0",
+          "obtained": "20,0",
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.pm",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.elig",
+          "expected": true,
+          "obtained": true,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pm",
+          "expected": 20,
+          "obtained": 20,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.elig",
+          "expected": true,
+          "obtained": true,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "20,0",
+          "obtained": "20,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "maços-ano",
+          "obtained": "maços-ano",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+      "input": {
+        "cig": 10,
+        "anos": 15,
+        "status": "0"
+      },
+      "obtained": {
+        "id": "carga-tabagica",
+        "main": [
+          "7,5",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 7.5,
+          "elig": null
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pm",
+          "expected": 7.5,
+          "obtained": 7.5,
+          "tolerance": 0.050000010000000004,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pm",
+          "expected": 7.5,
+          "obtained": 7.5,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.elig",
+          "expected": null,
+          "obtained": null,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "7,5",
+          "obtained": "7,5",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "maços-ano",
+          "obtained": "maços-ano",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+      "input": {
+        "cig": 40,
+        "anos": 30,
+        "status": "1",
+        "idade": 65,
+        "parou": 20
+      },
+      "obtained": {
+        "id": "carga-tabagica",
+        "main": [
+          "60,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 60,
+          "elig": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pm",
+          "expected": 60,
+          "obtained": 60,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.elig",
+          "expected": false,
+          "obtained": false,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pm",
+          "expected": 60,
+          "obtained": 60,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.elig",
+          "expected": false,
+          "obtained": false,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "60,0",
+          "obtained": "60,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "maços-ano",
+          "obtained": "maços-ano",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+      "input": {
+        "cig": 30,
+        "anos": 20,
+        "status": "1",
+        "idade": 70,
+        "parou": 10
+      },
+      "obtained": {
+        "id": "carga-tabagica",
+        "main": [
+          "30,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 30,
+          "elig": true
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.pm",
+          "expected": 30,
+          "obtained": 30,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "result.raw.elig",
+          "expected": true,
+          "obtained": true,
+          "scope": "Recorded rounded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.pm",
+          "expected": 30,
+          "obtained": 30,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.elig",
+          "expected": true,
+          "obtained": true,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "30,0",
+          "obtained": "30,0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "maços-ano",
+          "obtained": "maços-ano",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 43,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}
