@@ -1,0 +1,892 @@
+{
+  "schema": "elucenia-native-tool-actual-r6-local-HTTP-subset-r5",
+  "id": "carga-tabagica",
+  "sourceReceipt": {
+    "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+    "bytes": 7105396,
+    "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+  },
+  "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+  "checker": {
+    "file": "reports/review-20261005-completion/deploy-lock/verify-r6-all-calculators-http.cjs",
+    "sha256": "92411a9e01fe36e1bf380c3336f2171bdb523a02ff09683da75927b12b33b3fa",
+    "bytes": 20735
+  },
+  "health": {
+    "url": "http://127.0.0.1:3067/api/health",
+    "startedAt": "2026-10-05T17:35:43.039Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json",
+      "retryAfter": null,
+      "cacheControl": "no-store",
+      "nosniff": "nosniff"
+    },
+    "body": {
+      "status": "ok",
+      "application": "ELUCENIA",
+      "framework": "Next.js",
+      "version": "1.0.0"
+    },
+    "responseSha256": "65f95645e7826371eb2d9d3f96e0fed52ea4b88c77203f0cf2511769e57cd108",
+    "bytes": 80,
+    "elapsedMs": 27.345699999999994
+  },
+  "identity": {
+    "url": "http://127.0.0.1:3067/_next/data/jN-2wbRrarMjYPwdPnRHh/en/tools.json",
+    "startedAt": "2026-10-05T17:35:43.068Z",
+    "status": 200,
+    "headers": {
+      "contentType": "application/json; charset=utf-8",
+      "retryAfter": null,
+      "cacheControl": "s-maxage=31536000",
+      "nosniff": "nosniff"
+    },
+    "responseSha256": "404601e2c283a588a2f41af4feb5113d1993f76cc22f73a7b8ef4f5d17a82fa8",
+    "bytes": 103853,
+    "elapsedMs": 14.542600000000007,
+    "semanticMatchWithCompiledCatalog": true
+  },
+  "sourceCalculator": {
+    "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/carga-tabagica/calculator.js",
+    "sha256": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681",
+    "bytes": 5489
+  },
+  "sourceCalculatorMatchesCurrentCandidate": true,
+  "toolStatus": {
+    "cases": 4,
+    "replayed": 4,
+    "passed": 4,
+    "failed": 0,
+    "status": "passed"
+  },
+  "cases": [
+    {
+      "id": "carga-tabagica",
+      "kind": "native-source-reference",
+      "index": 0,
+      "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+      "originalInput": {
+        "cig": 20,
+        "anos": 20,
+        "status": "0",
+        "idade": 55
+      },
+      "input": {
+        "cig": 20,
+        "anos": 20,
+        "status": "0",
+        "idade": 55
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "pm": 20,
+          "elig": true
+        },
+        "level": "mid",
+        "main": "20,0"
+      },
+      "recordedResult": {
+        "main": [
+          "20,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 20,
+          "elig": true
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "cig": 20,
+            "anos": 20,
+            "status": "0",
+            "idade": 55
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+          "startedAt": "2026-10-05T17:36:03.525Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "carga-tabagica",
+              "main": [
+                "20,0",
+                "maços-ano"
+              ],
+              "label": "Carga tabágica",
+              "raw": {
+                "pm": 20,
+                "elig": true
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "b547f2ad391a6426bd7f2938fb8ad6e55c0a8da66cf09fd38873b2c67359e52b",
+          "bytes": 154,
+          "elapsedMs": 6.136300000001938
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "startedAt": "2026-10-05T17:36:03.525Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "carga-tabagica",
+            "main": [
+              "20,0",
+              "maços-ano"
+            ],
+            "label": "Carga tabágica",
+            "raw": {
+              "pm": 20,
+              "elig": true
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "b547f2ad391a6426bd7f2938fb8ad6e55c0a8da66cf09fd38873b2c67359e52b",
+        "bytes": 154,
+        "elapsedMs": 6.136300000001938
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.main",
+            "expected": "20,0",
+            "obtained": "20,0",
+            "scope": "Recorded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.pm",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.elig",
+            "expected": true,
+            "obtained": true,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pm",
+            "expected": 20,
+            "obtained": 20,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.elig",
+            "expected": true,
+            "obtained": true,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "20,0",
+            "obtained": "20,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "maços-ano",
+            "obtained": "maços-ano",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "carga-tabagica",
+      "kind": "native-source-reference",
+      "index": 1,
+      "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+      "originalInput": {
+        "cig": 10,
+        "anos": 15,
+        "status": "0"
+      },
+      "input": {
+        "cig": 10,
+        "anos": 15,
+        "status": "0"
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "pm": 7.5
+        },
+        "level": "info"
+      },
+      "recordedResult": {
+        "main": [
+          "7,5",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 7.5,
+          "elig": null
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "cig": 10,
+            "anos": 15,
+            "status": "0"
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+          "startedAt": "2026-10-05T17:36:03.838Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "carga-tabagica",
+              "main": [
+                "7,5",
+                "maços-ano"
+              ],
+              "label": "Carga tabágica",
+              "raw": {
+                "pm": 7.5,
+                "elig": null
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "d94ca9ff1b8c8b6bb60018ad65860e008364306519f13070181fecc892adcd05",
+          "bytes": 154,
+          "elapsedMs": 2.8364999999976135
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "startedAt": "2026-10-05T17:36:03.838Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "carga-tabagica",
+            "main": [
+              "7,5",
+              "maços-ano"
+            ],
+            "label": "Carga tabágica",
+            "raw": {
+              "pm": 7.5,
+              "elig": null
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "d94ca9ff1b8c8b6bb60018ad65860e008364306519f13070181fecc892adcd05",
+        "bytes": 154,
+        "elapsedMs": 2.8364999999976135
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.pm",
+            "expected": 7.5,
+            "obtained": 7.5,
+            "tolerance": 0.050000010000000004,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pm",
+            "expected": 7.5,
+            "obtained": 7.5,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.elig",
+            "expected": null,
+            "obtained": null,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "7,5",
+            "obtained": "7,5",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "maços-ano",
+            "obtained": "maços-ano",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "carga-tabagica",
+      "kind": "native-source-reference",
+      "index": 2,
+      "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+      "originalInput": {
+        "cig": 40,
+        "anos": 30,
+        "status": "1",
+        "idade": 65,
+        "parou": 20
+      },
+      "input": {
+        "cig": 40,
+        "anos": 30,
+        "status": "1",
+        "idade": 65,
+        "parou": 20
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "pm": 60,
+          "elig": false
+        },
+        "level": "info"
+      },
+      "recordedResult": {
+        "main": [
+          "60,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 60,
+          "elig": false
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "cig": 40,
+            "anos": 30,
+            "status": "1",
+            "idade": 65,
+            "parou": 20
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+          "startedAt": "2026-10-05T17:36:04.151Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "carga-tabagica",
+              "main": [
+                "60,0",
+                "maços-ano"
+              ],
+              "label": "Carga tabágica",
+              "raw": {
+                "pm": 60,
+                "elig": false
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "29e089122ccbcbe3c9b45f207378dc51713013314f351f7ca51c65d7f230cac0",
+          "bytes": 155,
+          "elapsedMs": 3.4117000000005646
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "startedAt": "2026-10-05T17:36:04.151Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "carga-tabagica",
+            "main": [
+              "60,0",
+              "maços-ano"
+            ],
+            "label": "Carga tabágica",
+            "raw": {
+              "pm": 60,
+              "elig": false
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "29e089122ccbcbe3c9b45f207378dc51713013314f351f7ca51c65d7f230cac0",
+        "bytes": 155,
+        "elapsedMs": 3.4117000000005646
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.pm",
+            "expected": 60,
+            "obtained": 60,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.elig",
+            "expected": false,
+            "obtained": false,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pm",
+            "expected": 60,
+            "obtained": 60,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.elig",
+            "expected": false,
+            "obtained": false,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "60,0",
+            "obtained": "60,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "maços-ano",
+            "obtained": "maços-ano",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    },
+    {
+      "id": "carga-tabagica",
+      "kind": "native-source-reference",
+      "index": 3,
+      "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+      "originalInput": {
+        "cig": 30,
+        "anos": 20,
+        "status": "1",
+        "idade": 70,
+        "parou": 10
+      },
+      "input": {
+        "cig": 30,
+        "anos": 20,
+        "status": "1",
+        "idade": 70,
+        "parou": 10
+      },
+      "amendments": [],
+      "expected": {
+        "raw": {
+          "pm": 30,
+          "elig": true
+        },
+        "level": "mid"
+      },
+      "recordedResult": {
+        "main": [
+          "30,0",
+          "maços-ano"
+        ],
+        "label": "Carga tabágica",
+        "raw": {
+          "pm": 30,
+          "elig": true
+        }
+      },
+      "provenance": {
+        "bank": {
+          "file": "reports/review-20261003/source-cases-audit.json",
+          "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3",
+          "bytes": 885399
+        },
+        "canonical": {
+          "file": "deliveries/elucenia-next-hostinger-r6/private/canonical-medical-tools.json",
+          "sha256": "988c58b5409ecc0df7e05193d88c7df930af9ce187b0688534a31f6d627ee4ad",
+          "bytes": 29045565
+        },
+        "scope": "Existing recorded source expectations and precise source-audit transport baseline; no newly derived independent oracle"
+      },
+      "request": {
+        "method": "POST",
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "origin": "http://127.0.0.1:3067",
+        "payload": {
+          "input": {
+            "cig": 30,
+            "anos": 20,
+            "status": "1",
+            "idade": 70,
+            "parou": 10
+          }
+        }
+      },
+      "attempts": [
+        {
+          "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+          "startedAt": "2026-10-05T17:36:04.466Z",
+          "status": 200,
+          "headers": {
+            "contentType": "application/json; charset=utf-8",
+            "retryAfter": null,
+            "cacheControl": "no-store",
+            "nosniff": "nosniff"
+          },
+          "body": {
+            "result": {
+              "id": "carga-tabagica",
+              "main": [
+                "30,0",
+                "maços-ano"
+              ],
+              "label": "Carga tabágica",
+              "raw": {
+                "pm": 30,
+                "elig": true
+              },
+              "clinicalValidation": "not-performed"
+            }
+          },
+          "responseSha256": "97680f43ddcd9f8bf92ee8336afcc6089a0bf5a9b7a429720d489339de2c0fa7",
+          "bytes": 154,
+          "elapsedMs": 9.000399999997171
+        }
+      ],
+      "observed": {
+        "url": "http://127.0.0.1:3067/api/tools/carga-tabagica/calculate",
+        "startedAt": "2026-10-05T17:36:04.466Z",
+        "status": 200,
+        "headers": {
+          "contentType": "application/json; charset=utf-8",
+          "retryAfter": null,
+          "cacheControl": "no-store",
+          "nosniff": "nosniff"
+        },
+        "body": {
+          "result": {
+            "id": "carga-tabagica",
+            "main": [
+              "30,0",
+              "maços-ano"
+            ],
+            "label": "Carga tabágica",
+            "raw": {
+              "pm": 30,
+              "elig": true
+            },
+            "clinicalValidation": "not-performed"
+          }
+        },
+        "responseSha256": "97680f43ddcd9f8bf92ee8336afcc6089a0bf5a9b7a429720d489339de2c0fa7",
+        "bytes": 154,
+        "elapsedMs": 9.000399999997171
+      },
+      "evaluation": {
+        "checks": [
+          {
+            "at": "status",
+            "expected": 200,
+            "obtained": 200,
+            "passed": true
+          },
+          {
+            "at": "result-object",
+            "expected": true,
+            "obtained": true,
+            "passed": true
+          },
+          {
+            "at": "result.raw.pm",
+            "expected": 30,
+            "obtained": 30,
+            "tolerance": 1e-8,
+            "difference": 0,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "result.raw.elig",
+            "expected": true,
+            "obtained": true,
+            "scope": "Recorded rounded source reference",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.pm",
+            "expected": 30,
+            "obtained": 30,
+            "tolerance": 1e-10,
+            "difference": 0,
+            "scope": "Existing precise source-audit transport regression, not independent formula validation",
+            "passed": true
+          },
+          {
+            "at": "regression.result.raw.elig",
+            "expected": true,
+            "obtained": true,
+            "scope": "Existing source-audit transport regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main.length",
+            "expected": 2,
+            "obtained": 2,
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[0]",
+            "expected": "30,0",
+            "obtained": "30,0",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          },
+          {
+            "at": "regression.result.main[1]",
+            "expected": "maços-ano",
+            "obtained": "maços-ano",
+            "scope": "Existing source-audit public representation regression",
+            "passed": true
+          }
+        ],
+        "notCompared": [
+          {
+            "key": "level",
+            "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+          }
+        ]
+      },
+      "status": "passed",
+      "error": null
+    }
+  ],
+  "scope": {
+    "syntheticDataOnly": true,
+    "applicationModuleImports": 0,
+    "browserInteractions": 0,
+    "newIndependentOracles": 0,
+    "nativeSourceReferenceCases": 882,
+    "additionalDecimalCases": 4,
+    "predictProstateHasSeparateFullCurveOracleReplay": true,
+    "clinicalApproval": false,
+    "professionalLanguageApproval": false,
+    "populationValidation": false,
+    "hostingerDeploymentVerified": false,
+    "actualHTTPExecution": true,
+    "standaloneNodeServer": true,
+    "nodeVersion": "v22.18.0",
+    "noNewClinicalOrProfessionalApproval": true,
+    "pubmedResourceIsNotCalculatorAndNotIncludedIn222": true,
+    "description": "All 882 existing reference cases across the 218 native calculators plus four existing Decimal50 examples, executed via HTTP against the final local r6 standalone build. Raw precise source-audit comparisons are transport regressions, not independent clinical or full-method validation."
+  },
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false,
+  "newIndependentOracle": false,
+  "actualBrowserJourney": false,
+  "hostingerDeploymentVerified": false
+}
