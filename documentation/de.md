@@ -84,3 +84,48 @@ Ergebnis der Formel oder Klassifikation. Interpretation, Vorgehen und Anwendbark
 Apache-2.0 gilt nur für den ELUCENIA-Code. Die Rechte an Instrumenten, Veröffentlichungen, Übersetzungen und Daten verbleiben bei den jeweiligen Rechteinhabern. Bewahren Sie LICENSE und NOTICE auf.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Dokumentierte Ergebnisse
+
+Die folgenden Angaben bewahren die Ausgaben der Methode für synthetische Beispiele. Sie stellen keine unabhängige klinische Validierung dar.
+
+### 1
+
+Geeignet für das jährliche Lungenkrebs-Screening mit Niedrigdosis-CT (USPSTF 2021)
+
+| Ergebnisdetails | |
+| --- | --- |
+| Zigaretten im Laufe des Lebens (ca.) | 146000 |
+
+Aktueller Raucher: Jeder Termin ist eine Gelegenheit, das Aufhören anzusprechen.
+
+
+### 2
+
+Rauchbelastung unter 20 Packungsjahren
+
+| Ergebnisdetails | |
+| --- | --- |
+| Zigaretten im Laufe des Lebens (ca.) | 54750 |
+
+Aktueller Raucher: Jeder Termin ist eine Gelegenheit, das Aufhören anzusprechen.
+
+
+### 3
+
+Außerhalb der USPSTF-2021-Screeningkriterien
+
+| Ergebnisdetails | |
+| --- | --- |
+| Zigaretten im Laufe des Lebens (ca.) | 438000 |
+| Grund | hat vor mehr als 15 Jahren aufgehört |
+
+
+### 4
+
+Geeignet für das jährliche Lungenkrebs-Screening mit Niedrigdosis-CT (USPSTF 2021)
+
+| Ergebnisdetails | |
+| --- | --- |
+| Zigaretten im Laufe des Lebens (ca.) | 219000 |
+

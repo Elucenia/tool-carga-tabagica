@@ -84,3 +84,48 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Elegível ao rastreamento anual de câncer de pulmão com TC de baixa dose (USPSTF 2021)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Cigarros ao longo da vida (aprox.) | 146.000 |
+
+Fumante atual: toda consulta é oportunidade de abordagem para cessação.
+
+
+### 2
+
+Carga abaixo de 20 maços-ano
+
+| Detalhes do resultado | |
+| --- | --- |
+| Cigarros ao longo da vida (aprox.) | 54.750 |
+
+Fumante atual: toda consulta é oportunidade de abordagem para cessação.
+
+
+### 3
+
+Fora dos critérios de rastreamento da USPSTF 2021
+
+| Detalhes do resultado | |
+| --- | --- |
+| Cigarros ao longo da vida (aprox.) | 438.000 |
+| Motivo | parou há mais de 15 anos |
+
+
+### 4
+
+Elegível ao rastreamento anual de câncer de pulmão com TC de baixa dose (USPSTF 2021)
+
+| Detalhes do resultado | |
+| --- | --- |
+| Cigarros ao longo da vida (aprox.) | 219.000 |
+

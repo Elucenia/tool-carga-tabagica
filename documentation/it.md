@@ -84,3 +84,48 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Elegibile per lo screening annuale del tumore del polmone con TC a basso dosaggio (USPSTF 2021)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Sigarette nel corso della vita (circa) | 146000 |
+
+Fumatore attuale: ogni visita è un'opportunità per affrontare la cessazione.
+
+
+### 2
+
+Esposizione tabagica inferiore a 20 pack-year
+
+| Dettagli del risultato | |
+| --- | --- |
+| Sigarette nel corso della vita (circa) | 54750 |
+
+Fumatore attuale: ogni visita è un'opportunità per affrontare la cessazione.
+
+
+### 3
+
+Fuori dai criteri di screening dell'USPSTF 2021
+
+| Dettagli del risultato | |
+| --- | --- |
+| Sigarette nel corso della vita (circa) | 438000 |
+| Motivo | ha smesso da più di 15 anni |
+
+
+### 4
+
+Elegibile per lo screening annuale del tumore del polmone con TC a basso dosaggio (USPSTF 2021)
+
+| Dettagli del risultato | |
+| --- | --- |
+| Sigarette nel corso della vita (circa) | 219000 |
+

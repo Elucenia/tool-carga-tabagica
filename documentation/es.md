@@ -84,3 +84,48 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Elegible para el cribado anual de cáncer de pulmón con TC de baja dosis (USPSTF 2021)
+
+| Detalles del resultado | |
+| --- | --- |
+| Cigarrillos a lo largo de la vida (aprox.) | 146000 |
+
+Fumador actual: cada consulta es una oportunidad para abordar la cesación.
+
+
+### 2
+
+Carga tabáquica por debajo de 20 paquetes-año
+
+| Detalles del resultado | |
+| --- | --- |
+| Cigarrillos a lo largo de la vida (aprox.) | 54750 |
+
+Fumador actual: cada consulta es una oportunidad para abordar la cesación.
+
+
+### 3
+
+Fuera de los criterios de cribado de la USPSTF 2021
+
+| Detalles del resultado | |
+| --- | --- |
+| Cigarrillos a lo largo de la vida (aprox.) | 438000 |
+| Motivo | dejó de fumar hace más de 15 años |
+
+
+### 4
+
+Elegible para el cribado anual de cáncer de pulmón con TC de baja dosis (USPSTF 2021)
+
+| Detalles del resultado | |
+| --- | --- |
+| Cigarrillos a lo largo de la vida (aprox.) | 219000 |
+

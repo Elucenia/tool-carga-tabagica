@@ -84,3 +84,48 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Eligible for annual lung cancer screening with low-dose CT (USPSTF 2021)
+
+| Result details | |
+| --- | --- |
+| Lifetime cigarettes (approx.) | 146000 |
+
+Current smoker: every visit is an opportunity to address cessation.
+
+
+### 2
+
+Tobacco exposure below 20 pack-years
+
+| Result details | |
+| --- | --- |
+| Lifetime cigarettes (approx.) | 54750 |
+
+Current smoker: every visit is an opportunity to address cessation.
+
+
+### 3
+
+Outside the USPSTF 2021 screening criteria
+
+| Result details | |
+| --- | --- |
+| Lifetime cigarettes (approx.) | 438000 |
+| Reason | quit more than 15 years ago |
+
+
+### 4
+
+Eligible for annual lung cancer screening with low-dose CT (USPSTF 2021)
+
+| Result details | |
+| --- | --- |
+| Lifetime cigarettes (approx.) | 219000 |
+

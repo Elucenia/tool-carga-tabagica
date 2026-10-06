@@ -1,0 +1,1405 @@
+{
+  "id": "carga-tabagica",
+  "implementationVersion": "carga-tabagica@native-2026-10-05+78646ce561f5",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarros ao longo da vida (aprox.)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "146.000",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegível ao rastreamento anual de câncer de pulmão com TC de baixa dose (USPSTF 2021)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Fumante atual: toda consulta é oportunidade de abordagem para cessação.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarros ao longo da vida (aprox.)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "54.750",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Carga abaixo de 20 maços-ano",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Fumante atual: toda consulta é oportunidade de abordagem para cessação.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarros ao longo da vida (aprox.)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "438.000",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Motivo",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "parou há mais de 15 anos",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Fora dos critérios de rastreamento da USPSTF 2021",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarros ao longo da vida (aprox.)",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              },
+              "value": {
+                "text": "219.000",
+                "locale": "pt-BR",
+                "template": "documented-source"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegível ao rastreamento anual de câncer de pulmão com TC de baixa dose (USPSTF 2021)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Lifetime cigarettes (approx.)",
+                "locale": "en",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "en",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Eligible for annual lung cancer screening with low-dose CT (USPSTF 2021)",
+            "locale": "en",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "Current smoker: every visit is an opportunity to address cessation.",
+            "locale": "en",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Lifetime cigarettes (approx.)",
+                "locale": "en",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "en",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Tobacco exposure below 20 pack-years",
+            "locale": "en",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "Current smoker: every visit is an opportunity to address cessation.",
+            "locale": "en",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Lifetime cigarettes (approx.)",
+                "locale": "en",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "en",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Reason",
+                "locale": "en",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "quit more than 15 years ago",
+                "locale": "en",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Outside the USPSTF 2021 screening criteria",
+            "locale": "en",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Lifetime cigarettes (approx.)",
+                "locale": "en",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "en",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Eligible for annual lung cancer screening with low-dose CT (USPSTF 2021)",
+            "locale": "en",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarrillos a lo largo de la vida (aprox.)",
+                "locale": "es",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "es",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegible para el cribado anual de cáncer de pulmón con TC de baja dosis (USPSTF 2021)",
+            "locale": "es",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "Fumador actual: cada consulta es una oportunidad para abordar la cesación.",
+            "locale": "es",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarrillos a lo largo de la vida (aprox.)",
+                "locale": "es",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "es",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Carga tabáquica por debajo de 20 paquetes-año",
+            "locale": "es",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "Fumador actual: cada consulta es una oportunidad para abordar la cesación.",
+            "locale": "es",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarrillos a lo largo de la vida (aprox.)",
+                "locale": "es",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "es",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Motivo",
+                "locale": "es",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "dejó de fumar hace más de 15 años",
+                "locale": "es",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Fuera de los criterios de cribado de la USPSTF 2021",
+            "locale": "es",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarrillos a lo largo de la vida (aprox.)",
+                "locale": "es",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "es",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegible para el cribado anual de cáncer de pulmón con TC de baja dosis (USPSTF 2021)",
+            "locale": "es",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarettes au cours de la vie (env.)",
+                "locale": "fr",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "fr",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Admissible au dépistage annuel du cancer du poumon par TDM à faible dose (USPSTF 2021)",
+            "locale": "fr",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "Fumeur actuel : chaque consultation est une occasion d'aborder l'arrêt du tabac.",
+            "locale": "fr",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarettes au cours de la vie (env.)",
+                "locale": "fr",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "fr",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Tabagisme inférieur à 20 paquets-années",
+            "locale": "fr",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "Fumeur actuel : chaque consultation est une occasion d'aborder l'arrêt du tabac.",
+            "locale": "fr",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarettes au cours de la vie (env.)",
+                "locale": "fr",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "fr",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Motif",
+                "locale": "fr",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "a arrêté de fumer il y a plus de 15 ans",
+                "locale": "fr",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Hors des critères de dépistage de l'USPSTF 2021",
+            "locale": "fr",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Cigarettes au cours de la vie (env.)",
+                "locale": "fr",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "fr",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Admissible au dépistage annuel du cancer du poumon par TDM à faible dose (USPSTF 2021)",
+            "locale": "fr",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Zigaretten im Laufe des Lebens (ca.)",
+                "locale": "de",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "de",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Geeignet für das jährliche Lungenkrebs-Screening mit Niedrigdosis-CT (USPSTF 2021)",
+            "locale": "de",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "Aktueller Raucher: Jeder Termin ist eine Gelegenheit, das Aufhören anzusprechen.",
+            "locale": "de",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Zigaretten im Laufe des Lebens (ca.)",
+                "locale": "de",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "de",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Rauchbelastung unter 20 Packungsjahren",
+            "locale": "de",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "Aktueller Raucher: Jeder Termin ist eine Gelegenheit, das Aufhören anzusprechen.",
+            "locale": "de",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Zigaretten im Laufe des Lebens (ca.)",
+                "locale": "de",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "de",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Grund",
+                "locale": "de",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "hat vor mehr als 15 Jahren aufgehört",
+                "locale": "de",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Außerhalb der USPSTF-2021-Screeningkriterien",
+            "locale": "de",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Zigaretten im Laufe des Lebens (ca.)",
+                "locale": "de",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "de",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Geeignet für das jährliche Lungenkrebs-Screening mit Niedrigdosis-CT (USPSTF 2021)",
+            "locale": "de",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Sigarette nel corso della vita (circa)",
+                "locale": "it",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "it",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegibile per lo screening annuale del tumore del polmone con TC a basso dosaggio (USPSTF 2021)",
+            "locale": "it",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "Fumatore attuale: ogni visita è un'opportunità per affrontare la cessazione.",
+            "locale": "it",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Sigarette nel corso della vita (circa)",
+                "locale": "it",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "it",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Esposizione tabagica inferiore a 20 pack-year",
+            "locale": "it",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "Fumatore attuale: ogni visita è un'opportunità per affrontare la cessazione.",
+            "locale": "it",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Sigarette nel corso della vita (circa)",
+                "locale": "it",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "it",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "Motivo",
+                "locale": "it",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "ha smesso da più di 15 anni",
+                "locale": "it",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Fuori dai criteri di screening dell'USPSTF 2021",
+            "locale": "it",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "Sigarette nel corso della vita (circa)",
+                "locale": "it",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "it",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "Elegibile per lo screening annuale del tumore del polmone con TC a basso dosaggio (USPSTF 2021)",
+            "locale": "it",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "السجائر مدى الحياة (تقريبًا)",
+                "locale": "ar",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "١٤٦٠٠٠",
+                "locale": "ar",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "مؤهل للتحري السنوي عن سرطان الرئة بالتصوير المقطعي المحوسب منخفض الجرعة (USPSTF 2021)",
+            "locale": "ar",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "المدخن الحالي: كل زيارة هي فرصة لطرح الإقلاع عن التدخين.",
+            "locale": "ar",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "السجائر مدى الحياة (تقريبًا)",
+                "locale": "ar",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "٥٤٧٥٠",
+                "locale": "ar",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "العبء التبغي أقل من 20 pack-year",
+            "locale": "ar",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "المدخن الحالي: كل زيارة هي فرصة لطرح الإقلاع عن التدخين.",
+            "locale": "ar",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "السجائر مدى الحياة (تقريبًا)",
+                "locale": "ar",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "٤٣٨٠٠٠",
+                "locale": "ar",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "السبب",
+                "locale": "ar",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "أقلع منذ أكثر من 15 عامًا",
+                "locale": "ar",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "خارج معايير التحري الخاصة بـ USPSTF 2021",
+            "locale": "ar",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "السجائر مدى الحياة (تقريبًا)",
+                "locale": "ar",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "٢١٩٠٠٠",
+                "locale": "ar",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "مؤهل للتحري السنوي عن سرطان الرئة بالتصوير المقطعي المحوسب منخفض الجرعة (USPSTF 2021)",
+            "locale": "ar",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "终生吸烟支数（约）",
+                "locale": "zh",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "zh",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "符合采用低剂量 CT 进行肺癌年度筛查的条件（USPSTF 2021）",
+            "locale": "zh",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "现吸烟者：每次就诊都是进行戒烟干预的机会。",
+            "locale": "zh",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "终生吸烟支数（约）",
+                "locale": "zh",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "zh",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "烟草暴露低于 20 包年",
+            "locale": "zh",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "现吸烟者：每次就诊都是进行戒烟干预的机会。",
+            "locale": "zh",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "终生吸烟支数（约）",
+                "locale": "zh",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "zh",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "原因",
+                "locale": "zh",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "已戒烟超过 15 年",
+                "locale": "zh",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "不符合 USPSTF 2021 筛查标准",
+            "locale": "zh",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "终生吸烟支数（约）",
+                "locale": "zh",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "zh",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "符合采用低剂量 CT 进行肺癌年度筛查的条件（USPSTF 2021）",
+            "locale": "zh",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "生涯の喫煙本数（概算）",
+                "locale": "ja",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "ja",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低線量CTによる肺がん年次スクリーニングの適格あり（USPSTF 2021）",
+            "locale": "ja",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "現在喫煙者：受診のたびに禁煙介入の機会がある。",
+            "locale": "ja",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "生涯の喫煙本数（概算）",
+                "locale": "ja",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "ja",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "20パックイヤー未満の喫煙歴",
+            "locale": "ja",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "現在喫煙者：受診のたびに禁煙介入の機会がある。",
+            "locale": "ja",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "生涯の喫煙本数（概算）",
+                "locale": "ja",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "ja",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "理由",
+                "locale": "ja",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "15年以上前に禁煙した",
+                "locale": "ja",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "USPSTF 2021 のスクリーニング基準の範囲外",
+            "locale": "ja",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "生涯の喫煙本数（概算）",
+                "locale": "ja",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "ja",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "低線量CTによる肺がん年次スクリーニングの適格あり（USPSTF 2021）",
+            "locale": "ja",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "20 cigarros/dia por 20 anos, 55 anos, fumante: 20 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "जीवन भर की सिगरेटें (लगभग)",
+                "locale": "hi",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "146000",
+                "locale": "hi",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  146000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "लो-डोज़ CT के साथ वार्षिक फेफड़े के कैंसर स्क्रीनिंग के लिए पात्र (USPSTF 2021)",
+            "locale": "hi",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "note": {
+            "text": "वर्तमान धूम्रपान करने वाला: हर मुलाकात छोड़ने पर बात करने का अवसर है।",
+            "locale": "hi",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "10 cigarros/dia por 15 anos, sem idade: 7,5 maços-ano",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "जीवन भर की सिगरेटें (लगभग)",
+                "locale": "hi",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "54750",
+                "locale": "hi",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  54750
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "20 पैक-वर्ष से कम तंबाकू-एक्सपोज़र",
+            "locale": "hi",
+            "template": "documented-authored-20dbc23f0b7a8ceb5564"
+          },
+          "note": {
+            "text": "वर्तमान धूम्रपान करने वाला: हर मुलाकात छोड़ने पर बात करने का अवसर है।",
+            "locale": "hi",
+            "template": "documented-authored-072e5f54f9f68abfc9eb"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "40/dia por 30 anos, 65 anos, parou há 20 anos: 60 maços-ano, fora do rastreamento",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "जीवन भर की सिगरेटें (लगभग)",
+                "locale": "hi",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "438000",
+                "locale": "hi",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  438000
+                ]
+              }
+            },
+            {
+              "key": "documented-1",
+              "label": {
+                "text": "कारण",
+                "locale": "hi",
+                "template": "documented-authored-e0f7eb50ce1045f2ba54"
+              },
+              "value": {
+                "text": "15 वर्ष से अधिक समय पहले छोड़ दिया",
+                "locale": "hi",
+                "template": "documented-authored-0d8af82de4abde68b43c"
+              }
+            }
+          ],
+          "verdict": {
+            "text": "USPSTF 2021 स्क्रीनिंग मानदंडों के बाहर",
+            "locale": "hi",
+            "template": "documented-authored-e32aa4003ee39521d588"
+          },
+          "level": "info"
+        }
+      },
+      {
+        "name": "30/dia por 20 anos, 70 anos, parou há 10 anos: 30 maços-ano, elegível",
+        "output": {
+          "rows": [
+            {
+              "key": "documented-0",
+              "label": {
+                "text": "जीवन भर की सिगरेटें (लगभग)",
+                "locale": "hi",
+                "template": "documented-authored-444b18b5e7e3008bd033"
+              },
+              "value": {
+                "text": "219000",
+                "locale": "hi",
+                "template": "documented-authored-57cf40c19f7dcf56f599",
+                "sourceNumbers": [
+                  219000
+                ]
+              }
+            }
+          ],
+          "verdict": {
+            "text": "लो-डोज़ CT के साथ वार्षिक फेफड़े के कैंसर स्क्रीनिंग के लिए पात्र (USPSTF 2021)",
+            "locale": "hi",
+            "template": "documented-authored-c871b4b1fc6e617e0d9a"
+          },
+          "level": "mid"
+        }
+      }
+    ]
+  }
+}

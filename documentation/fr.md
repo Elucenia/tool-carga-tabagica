@@ -84,3 +84,48 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Admissible au dépistage annuel du cancer du poumon par TDM à faible dose (USPSTF 2021)
+
+| Détails du résultat | |
+| --- | --- |
+| Cigarettes au cours de la vie (env.) | 146000 |
+
+Fumeur actuel : chaque consultation est une occasion d'aborder l'arrêt du tabac.
+
+
+### 2
+
+Tabagisme inférieur à 20 paquets-années
+
+| Détails du résultat | |
+| --- | --- |
+| Cigarettes au cours de la vie (env.) | 54750 |
+
+Fumeur actuel : chaque consultation est une occasion d'aborder l'arrêt du tabac.
+
+
+### 3
+
+Hors des critères de dépistage de l'USPSTF 2021
+
+| Détails du résultat | |
+| --- | --- |
+| Cigarettes au cours de la vie (env.) | 438000 |
+| Motif | a arrêté de fumer il y a plus de 15 ans |
+
+
+### 4
+
+Admissible au dépistage annuel du cancer du poumon par TDM à faible dose (USPSTF 2021)
+
+| Détails du résultat | |
+| --- | --- |
+| Cigarettes au cours de la vie (env.) | 219000 |
+

@@ -173,7 +173,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Maços de 20 cigarros; packyears; corte USPSTF 2021:50–80 anos,≥20 maçosano, cessação≤15 anos",
-    "implementationVersion": "carga-tabagica@native-2026-10-03+7e22da478091",
+    "implementationVersion": "carga-tabagica@native-2026-10-05+78646ce561f5",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/33687470/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -276,7 +276,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681"
+      "implementationHash": "78646ce561f558f58f44f17e153c1a9f4065b69c998350cf0346a430bc2b69a7",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "carga-tabagica@native-2026-10-03+7e22da478091",
+          "previousImplementationHash": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681",
+          "implementationHash": "78646ce561f558f58f44f17e153c1a9f4065b69c998350cf0346a430bc2b69a7",
+          "scientificBodySha256": "a3892023b2ac31ca01a3907a22e3cbceaf49042d0b5056698f3bba2e7fced26c",
+          "metadataContractHash": "bf37d58fd722f5f8ac685b368ad6ef4f16cfafc330391ca649ca904d2f40e4d9",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Os critérios USPSTF 2021 referem-se a rastreamento anual por tomografia de baixa dose em adultos de 50–80 anos com histórico de pelo menos 20 maços-ano, fumantes atuais ou que cessaram nos últimos 15 anos. A recomendação também determina interromper o rastreamento após 15 anos sem fumar ou quando condições de saúde limitam substancialmente a expectativa de vida ou a capacidade/disposição para cirurgia pulmonar curativa. O cálculo de maços-ano não avalia essas condições clínicas.",
     "sourceLimitEvidence": {
@@ -295,15 +323,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/carga-tabagica/calculator.js",
-    "bytes": 5489,
-    "sha256": "7e22da478091e564d7a8231d85f3f3ba02951dfd517ed41f6156155163552681"
+    "bytes": 5694,
+    "sha256": "78646ce561f558f58f44f17e153c1a9f4065b69c998350cf0346a430bc2b69a7"
   },
-  "sourceToolSha256": "8d92291ab3b9204db60590a40ba482249f43afda34295ac5d5244ff42a3ed841",
+  "sourceToolSha256": "8dbfa4c3be20e3938b410ba67050b00d8047d5c3c76458ef51d6acdb6e964344",
   "omittedFullReferenceBanks": [
     {
       "rows": 112,
       "sha256": "2c249b36a4e08c9172ba8a10a1956b6afdf5ae8a95b3ee424e19e6ad4a44416e",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
